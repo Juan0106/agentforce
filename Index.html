@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Bienvenida</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0070d2;
+      color: white;
+      padding: 20px 0;
+    }
+    main {
+      margin: 50px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a nuestro portal</h1>
+  </header>
+  <main>
+    <p>Gracias por visitarnos. Si necesitas ayuda, utiliza el chat en la esquina inferior.</p>
+  </main>
+
+  <!-- Script de Embedded Messaging -->
+  <script type='text/javascript'> 
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'es_MX'; // Idioma configurado
+
+        embeddedservice_bootstrap.init(
+          '00D4C0000004ZDb',
+          'Pruebas_de_agente',
+          'https://paquetexpress--qa2020.sandbox.my.site.com/ESWPruebasdeagente1756769433136',
+          {
+            scrt2URL: 'https://paquetexpress--qa2020.sandbox.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script 
+    type='text/javascript' 
+    src='https://paquetexpress--qa2020.sandbox.my.site.com/ESWPruebasdeagente1756769433136/assets/js/bootstrap.min.js' 
+    onload='initEmbeddedMessaging()'>
+  </script>
+</body>
+</html>
